@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Test_Learn</string>
+
+    <string name="message">the user %s has been registered with email %s</string>
 </resources>
