@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import com.example.test_learn.ui.components.TreeHome
 import com.example.test_learn.ui.screens.CoilImageLoad
 import com.example.test_learn.ui.screens.Snapbar
+import com.example.test_learn.ui.task2.StateApp
 import com.example.test_learn.ui.theme.Test_LearnTheme
 
 class MainActivity : ComponentActivity() {
@@ -18,8 +19,10 @@ class MainActivity : ComponentActivity() {
 //                TreeHome()
 //                TreeHome()
 //                Snapbar()
-                CoilImageLoad()
+//                CoilImageLoad()
+                StateApp()
             }
+
         }
     }
 }
