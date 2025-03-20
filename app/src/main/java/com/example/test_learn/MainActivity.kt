@@ -24,6 +24,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.Navigation
@@ -93,25 +94,45 @@ fun footerNav(modifier: Modifier = Modifier.fillMaxWidth(),navcontroller: NavHos
         verticalAlignment = Alignment.CenterVertically){
         Icon(imageVector = Icons.Filled.Home, contentDescription = "home btn",
             modifier = Modifier.clickable {
-                navcontroller.navigate("home")
+                navcontroller.navigate("home"){
+                    popUpTo(navcontroller.graph.startDestinationId)
+                    launchSingleTop =true
+
+                }
             })
         Spacer(modifier = Modifier.padding(10.dp))
         Icon(imageVector = Icons.Filled.Build, contentDescription = "snapbar",
             modifier = Modifier.clickable {
-                navcontroller.navigate("snapbar")
+                navcontroller.navigate("snapbar"){
+                    popUpTo(navcontroller.graph.startDestinationId)
+                    launchSingleTop = true
+                }
             })
         Spacer(modifier = Modifier.padding(10.dp))
         Icon(imageVector = Icons.Filled.Menu, contentDescription = "stateapp",
             modifier = Modifier.clickable {
-                navcontroller.navigate("stateapp")
+                navcontroller.navigate("stateapp"){
+                    popUpTo(navcontroller.graph.startDestinationId)
+                    launchSingleTop = true
+                }
             })
         Spacer(modifier = Modifier.padding(10.dp))
         Icon(imageVector = Icons.Filled.ShoppingCart, contentDescription = "shoping",
             modifier = Modifier.clickable {
-                navcontroller.navigate("shoping")
+                navcontroller.navigate("shoping"){
+                    popUpTo(navcontroller.graph.startDestinationId)
+                    launchSingleTop = true
+                }
             })
         Spacer(modifier = Modifier.padding(10.dp))
 
     }
+
+}
+
+@Preview
+@Composable
+private fun mainBodyPreview() {
+    mainBody()
 
 }
