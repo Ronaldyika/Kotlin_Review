@@ -9,6 +9,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.example.test_learn.ui.components.TreeHome
+import com.example.test_learn.ui.screens.CardList
 import com.example.test_learn.ui.screens.Snapbar
 import com.example.test_learn.ui.screens.shopingCard
 import com.example.test_learn.ui.task2.StateApp
@@ -29,6 +30,9 @@ fun NavHostData(modifier: Modifier = Modifier, navController: NavHostController,
         }
         composable(route="shoping"){
             shopingCard()
+        }
+        composable(route = "loadimages"){
+            CardList()
         }
 
     }

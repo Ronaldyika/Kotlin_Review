@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.AccountBox
 import androidx.compose.material.icons.filled.Build
 import androidx.compose.material.icons.filled.Face
 import androidx.compose.material.icons.filled.Home
@@ -125,6 +126,13 @@ fun footerNav(modifier: Modifier = Modifier.fillMaxWidth(),navcontroller: NavHos
                 }
             })
         Spacer(modifier = Modifier.padding(10.dp))
+        Icon(imageVector = Icons.Filled.AccountBox, contentDescription = "items",
+            modifier = Modifier.clickable {
+                navcontroller.navigate("loadimages"){
+                    popUpTo(navcontroller.graph.startDestinationId)
+                    launchSingleTop = true
+                }
+            })
 
     }
 
