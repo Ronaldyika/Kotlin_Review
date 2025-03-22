@@ -26,12 +26,11 @@ class cardViewModel(private val cardRepository: cardRepository) : ViewModel() {
 
 
 
-class CardViewModelFactory(private val cardRepository: cardRepository) : ViewModelProvider.Factory {
-
+class CardViewModelFactory(private val repository: cardRepository) : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(cardViewModel::class.java)) {
             @Suppress("UNCHECKED_CAST")
-            return cardViewModel(cardRepository) as T
+            return cardViewModel(repository) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class")
     }
